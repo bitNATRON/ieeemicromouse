@@ -1,362 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Micro Mouse Competition</title>
-    <style>
-        body {
-            font-family: 'Formata', sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-
-    	header {
-	    background: linear-gradient(to right, #001c55, #0073e6);
-	    color: #ffffff;
-	    padding: 1em;
-	    text-align: center;
-	    position: relative;
-	    display: flex;
-	    justify-content: space-between;
-	    align-items: center;
-	    border-radius: 0 0 10px 10px;
-	    flex-wrap: wrap;
-	    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adicionando sombra */
-        }
-
-        header img {
-            width: 170px;
-            max-width: 100%;
-            height: auto;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        .action-buttons {
-            display: flex;
-            align-items: center;
-        }
-
-        .action-buttons a {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 0 10px;
-            text-decoration: none;
-            font-weight: bold;
-            border: 2px solid #fff;
-            border-radius: 5px;
-            color: #ffffff;
-            transition: background-color 0.3s ease;
-        }
-
-        .action-buttons a:hover {
-            background-color: #f0f0f0;
-            color: #001c55;
-        }
-
-        section {
-            background: linear-gradient(to right, #ffffff, #f0f0f0);
-            padding: 2em;
-            display: flex;
-            flex-wrap: wrap;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #001c55;
-            width: 100%;
-        }
-
-        p {
-            line-height: 1.6em;
-            margin-bottom: 1em;
-        }
-
-        .contact-info {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        .contact-info div {
-            width: 48%;
-        }
-
-        .map-container,
-        .contact-info {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 300px;
-        }
-
-	footer {
-	    background: linear-gradient(to right, #001c55, #0073e6);
-	    color: #ffffff;
-	    text-align: center;
-	    padding: 1em;
-	    border-radius: 10px 10px 0 0;
-	    position: relative;
-	    margin-top: 20px; /* Adicione um espaço entre o conteúdo e o footer */
-	}
-
-	footer::after {
-	    content: "";
-	    display: table;
-	    clear: both; /* Limpa o espaço flutuante apenas para o rodapé */
-	}
-
-        footer p {
-            margin: 0;
-        }
-
-        .instagram-icon {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-        }
-
-        .quem-somos-container {
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        .quem-somos-header {
-            background-color: #001c55;
-            color: #ffffff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .quem-somos-menu {
-            background-color: #f0f0f0;
-            padding: 10px;
-        }
-
-        .quem-somos-menu ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .quem-somos-menu li {
-            margin-bottom: 10px;
-        }
-
-        .quem-somos-menu a {
-            text-decoration: none;
-            color: #333;
-            padding: 5px 10px;
-            border-radius: 5px;
-            background-color: #ddd;
-            display: block;
-        }
-
-        .quem-somos-menu a:hover {
-            background-color: #ccc;
-        }
-
-        .quem-somos-content {
-            padding: 20px;
-        }
-
-        .quem-somos-integrante {
-            margin-bottom: 20px;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #fff;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            display: none; /* Inicialmente oculto */
-        }
-
-        .quem-somos-integrante.active {
-            display: block; /* Exibir quando ativo */
-        }
-
-        .quem-somos-integrante img {
-            width: 100px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-    </style>
+    <title>Competição Micro Mouse</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header>
-        <img src="https://brand-experience.ieee.org/wp-content/uploads/2019/07/logo-masterbrand-white-transparent.png" alt="IEEE Logo">
-        <h1>Competição Micro Mouse</h1>
-        <div class="action-buttons">
-            <a class="team-sign-up-button" href="https://docs.google.com/forms/d/e/1FAIpQLSegZYWn2nBV5Mvf-HtQH1gNBADY4ADseOREKSy9fEsR0K1zfQ/viewform?usp=sf_link" target="_blank">Inscrição</a>
+        <div class="hamburger" onclick="toggleMobileMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
+        <div class="logo-container">
+            <img src="https://brand-experience.ieee.org/wp-content/uploads/2019/07/logo-masterbrand-white-transparent.png" alt="IEEE Logo" class="logo" onclick="window.location.href='index.html'">
+            <img src="logo.png" alt="Logo" class="logo" onclick="window.location.href='index.html'">
+        </div>
+        <nav class="desktop-menu">
+            <a href="https://forms.gle/ATAtKMYsv4bhyYhK9" class="nav-link">Participar</a>
+        </nav>
     </header>
 
-    <section>
-        <h2>O que é a competição?</h2>
-        <p>Proposta pelo IEEE Unesp Bauru, nesta competição, os competidores deverão desenvolver um robô autônomo “mouse” que deve ser capaz de concluir um determinado trajeto contido em um labirinto de dimensões padronizadas no menor tempo possível. As equipes criam mouses que seguem regras descritas no <a href="https://github.com/bitNATRON/ieee-micro-mouse/blob/main/Edital%20Oficial.pdf" target="_blank">edital</a> oficial. Os participantes apresentam suas inovações, e prêmios são concedidos com base nos tempos de execução. A competição promove habilidades técnicas, criatividade e colaboração na área de robótica autônoma.</p>
+    <nav class="mobile-menu">
+        <a href="index.html" class="nav-link">Página Inicial</a>
+        <a href="calendario.html" class="nav-link">Calendário</a>
+        <a href="labirinto.html" class="nav-link">Geração de Labirinto</a>
+        <a href="https://forms.google.com/" class="nav-link">Inscrever-se</a>
+    </nav>
 
-        <h2>O que é o IEEE Unesp Bauru?</h2>
-        <p>Refere-se ao ramo estudantil da Universidade Estadual Paulista (Unesp) localizado em Bauru - SP. O IEEE (Instituto de Engenheiros Eletricistas e Eletrônicos) é uma organização profissional global dedicada ao avanço da tecnologia. Os ramos estudantis do IEEE são grupos de estudantes afiliados à organização principal, focados em promover atividades, eventos, palestras e workshops acadêmicos, profissionais e sociais relacionadas a engenharia elétrica, eletrônica e áreas afins.</p>
+    <main>
+        <section>
+            <h2>Hello, world!</h2>
+            <p>O <strong>IEEE Unesp Bauru</strong> está desafiando estudantes a criarem robôs autônomos capazes de navegar por um <strong>labirinto gerado por um algorítimo livre</strong> no menor tempo possível! Além de desenvolver <strong>habilidades técnicas e de grupo na área de engenharia</strong> do participantes, <strong>prêmios</strong> serão concebidos com base na eficiência e precisão do robô dos competidores com base no <a href="https://github.com/bitNATRON/ieee-micro-mouse/blob/main/Edital%20Oficial.pdf" target="_blank">edital</a>.</p>
+        </section>
 
-    <h2>Elegibilidade</h2>
-    <ol>
-        <li>
-            <h3>Membresia IEEE</h3>
-            <p>O líder do time de ser estudante membro do IEEE no momento da inscrição no concurso Micromouse. Até dois alunos de pós-graduação por equipe também são permitidos conforme indicado em uma regra seguinte, desde que atendam a todos os outros requisitos.</p>
-        </li>
-        <li>
-            <h3>Apresentação</h3>
-            <p>Os competidores farão uma breve apresentação do seu mouse design antes da competição (5 minutos no máximo), se o tempo permitir.</p>
-        </li>
-        <li>
-            <h3>Tamanho do Time</h3>
-            <p>Uma equipe pode ser composta por até cinco pessoas. Uma equipe de quatro ou cinco pessoas podem incluir no máximo dois estudantes de pós-graduação. Uma equipe de duas ou três pessoas não pode ter mais do que um estudante graduado. Uma equipe composta por um único aluno graduado não é permitida.</p>
-        </li>
-        <li>
-            <h3>Inscrição</h3>
-            <p>Todos os participantes do concurso devem declarar sua intenção de participar do concurso pelo menos 4 semanas antes da data do mesmo. Este aviso deverá ser submetido ao atual…….</p>
-        </li>
-        <li>
-            <h3>Limitações de Inscrição</h3>
-            <p>Cada faculdade pode inscrever um número indefinido de equipes, desde que os grupos obedeçam às outras regras. Dois ou mais ratos de design quase idêntico da mesma faculdade não são permitidos.</p>
-        </li>
-        <li>
-            <h3>Credenciamento</h3>
-            <p>As equipes inscritas deverão realizar o credenciamento de todos os seus integrantes (até cinco) no período antes da competição, tendo em mãos a identidade (RG) e o cartão do plano de saúde originais em mãos.</p>
-        </li>
-        <li>
-            <h3>Competição</h3>
-            <p>A competição é apenas para projetos que foram desenvolvidos do zero, projetos adquiridos de outras formas não são considerados válidos.</p>
-        </li>
-    </ol>
-    </section>
+	    <section>
+		<h2>Regras</h2>
+		<ol>
+		    <li>
+		        <p><strong>Design do Robô:</strong> O robô deve ser completamente autônomo, sem controle humano durante a corrida.</p>
+		    </li>
+		    <li>
+		        <p><strong>Tamanho do Robô:</strong> O robô deve caber dentro de uma caixa de 25cm x 25cm.</p>
+		    </li>
+		    <li>
+		        <p><strong>Tempo:</strong> Cada equipe tem um tempo limite para completar o labirinto, que será definido no início da competição.</p>
+		    </li>
+		    <li>
+		        <p><strong>Critérios de Avaliação:</strong> Os robôs serão avaliados com base na velocidade e precisão com que completam o labirinto.</p>
+		    </li>
+		    <li>
+		        <p><strong>Participantes:</strong> Cada equipe deve ser composta por no máximo 5 membros, seguindo as restrições do <a href="https://github.com/bitNATRON/ieee-micro-mouse/blob/main/Edital%20Oficial.pdf" target="_blank">edital</a></p>
+		    </li>
+		</ol>
+	    </section>
 
-<!-- Informações de Contato e Endereço -->
-<div class="contact-info">
-    <div>
-        <h3>&nbsp;&nbsp;Endereço:</h3>
-        <p>&nbsp;&nbsp;Av. Eng. Luís Edmundo Carrijo Coube, 14-01 - Vargem Limpa, Bauru - SP, 17033-360</p>
-    </div>
-    <div>
-        <h3>&nbsp;Contatos:</h3>
-        <ul>
-            <li>ieee.ramo.bauru@gmail.com</li>
-        </ul>
-    </div>
-</div>
+        <section class="contact-info">
+            <div>
+                <h2>Contato</h2>
+                <p>Av. Eng. Luís Edmundo Carrijo Coube, 14-01 - Vargem Limpa, Bauru - SP, 17033-360</p>
+                <p>Email: ieee.ramo.bauru@gmail.com</p>
+                <p>Telefone: +55 (14) 1234-5678</p>
+            </div>
+            <div class="map-container">
+                <h2>Localização</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d59041.5108114556!2d-49.07489976821063!3d-22.350063184235744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e2!4m0!4m5!1s0x94bf5dfbade14bef%3A0xf2336695454258b!2sCollege%20of%20Engineering%20-%20FE%20-%20Unesp%20-%20Bauru%2C%20Av.%20Eng.%20Lu%C3%ADs%20Edmundo%20Carrijo%20Coube%2C%2014-01%20-%20Vargem%20Limpa%2C%20Bauru%20-%20SP%2C%2017033-360!3m2!1d-22.350138299999998!2d-49.0336339!5e0!3m2!1sen!2sbr!4v1710265412521!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
 
-<!-- Mapa do Google -->
-<div class="map-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d59041.5108114556!2d-49.07489976821063!3d-22.350063184235744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e2!4m0!4m5!1s0x94bf5dfbade14bef%3A0xf2336695454258b!2sCollege%20of%20Engineering%20-%20FE%20-%20Unesp%20-%20Bauru%2C%20Av.%20Eng.%20Lu%C3%ADs%20Edmundo%20Carrijo%20Coube%2C%2014-01%20-%20Vargem%20Limpa%2C%20Bauru%20-%20SP%2C%2017033-360!3m2!1d-22.350138299999998!2d-49.0336339!5e0!3m2!1sen!2sbr!4v1710265412521!5m2!1sen!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
+        <section class="quem-somos-container">
+            <div class="quem-somos-header">
+		<p> </p>
+                <h2>Quem Somos?</h2>
+            </div>
+            <div class="quem-somos-menu">
+                <ul>
+                    <li><a href="#" onclick="showIntegrante('integrante1', event)">Criadores</a></li>
+                    <li><a href="#" onclick="showIntegrante('integrante2', event)">Patrocínios</a></li>
+                    <li><a href="#" onclick="showIntegrante('integrante3', event)">Juízes</a></li>
+                </ul>
+            </div>
+            <div class="quem-somos-content">
+                <div id="integrante1" class="quem-somos-integrante">
+                    <h3>Criador 1</h3>
+                    <img src="https://via.placeholder.com/100" alt="criador.png">
+                    <p>Lorem ipsum dolor sit amet. Quo sequi dolor eum magnam dolorum et molestias quos est ducimus esse aut doloribus harum sit laudantium voluptatibus.</p>
+                </div>
+                <div id="integrante2" class="quem-somos-integrante">
+                    <h3>Patrocinador 1</h3>
+                    <img src="https://via.placeholder.com/100" alt="patrocinador.png">
+                    <p>Ex quisquam impedit et omnis minima et aliquid inventore in molestias maxime est exercitationem galisum qui ipsa odit. Ab vitae voluptate ut dolorem laudantium ut maxime quae aut eius aspernatur id laboriosam sunt.</p>
+                </div>
+                <div id="integrante3" class="quem-somos-integrante">
+                    <h3>Juiz 1</h3>
+                    <img src="https://via.placeholder.com/100" alt="juiz.png">
+                    <p>Qui illo commodi qui internos suscipit non galisum possimus ex labore excepturi. Hic maxime sint aut adipisci soluta nam accusantium voluptates ea necessitatibus eveniet.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<!-- Quem Somos -->
-<div class="quem-somos-container">
-    <div class="quem-somos-header">
-        <h2 style="color: white;">Quem Somos</h2>
-    </div>
-	<div class="quem-somos-menu">
-	    <ul>
-		<li><a href="#voluntario2">Idealizador do Projeto e Voluntário</a></li>
-		<li><a href="#lider">Líder do Projeto</a></li>
-		<li><a href="#membros">Membros do Projeto</a></li>
-		<li><a href="#diretor">Diretor de Projetos</a></li>
-		<li><a href="#voluntario1">Ex-Diretor de Projetos</a></li>
-	    </ul>
-	</div>
-    </div>
-    <div class="quem-somos-content">
-        <div id="diretor" class="quem-somos-integrante">
-            <img src="https://media.licdn.com/dms/image/C4E03AQFNmalxrdeyzw/profile-displayphoto-shrink_400_400/0/1627652981680?e=1718841600&v=beta&t=4RYDX_uFEAp9k4sWp5dCEAfWs6_oaLVyOUtST681iwk" alt="Foto do Diretor">
-            <h3>Carlos Neri</h3>
-            <p>Entrou na diretoria de projetos no primeiro semestre de 2024. E ainda está em seu cargo hoje em dia.</p>
-            <p>Áreas: Gestão, porta-voz, revisão e monitoramento.</p>
-            <p>Linkedin: https://www.linkedin.com/in/carlos-neri-91a9ba195/</p>
-        </div>
-        <div id="lider" class="quem-somos-integrante">
-            <img src="https://media.licdn.com/dms/image/C4D03AQEdNCLuHYxu-A/profile-displayphoto-shrink_800_800/0/1650548720119?e=1718841600&v=beta&t=tI0PlzjKJ2Su0QL-J8TzRHxjvCamFhpSJYJPAih4Bfs" alt="Foto do Líder">
-            <h3>Vicente Ramos</h3>
-            <p>Entrou no projeto no segundo semestre de 2023. No semestre seguinte se tornou líder.</p>
-            <p>Áreas: Idealização, criação de regras e organização.</p>
-            <p>Linkedin: https://www.linkedin.com/in/vicente-ramos-46a309226/</p>
-        </div>
-        <div id="voluntario1" class="quem-somos-integrante">
-            <img src="https://media.licdn.com/dms/image/C4D03AQG4Xgz3OLwhjw/profile-displayphoto-shrink_800_800/0/1640790424637?e=1718841600&v=beta&t=KpvlC3wTYdFE0_J1uPYF9KDSsMKeM_NpOVncenVvX3k" alt="Foto do Voluntário 1">
-            <h3>Breno Carrara</h3>
-            <p>Entrou na diretoria de projetos no primeiro semestre de 2023. E finalizou sua atuação na diretoria no primeiro semestre de 2024.</p>
-            <p>Áreas: Formação do time, gestão e porta-voz.</p>
-	<p>Linkedin: https://www.linkedin.com/in/breno-carrara-7b6356229/</p>
-        </div>
-        <div id="voluntario2" class="quem-somos-integrante">
-            <img src="https://picsur.org/i/88e8cb37-ecd2-4936-9437-eeebb56f59de.jpg" alt="Foto do Voluntário 2">
-            <h3>Guilherme Carminato</h3>
-            <p>Começou como idealizador e membro no projeto em 2023. No semestre seguinte se tornou voluntário.</p>
-            <p>Áreas: Idealização, revisão e adaptação.</p>
-            <p>Linkedin: https://www.linkedin.com/in/guilherme-carminato-732981212/</p> 
-        </div>
-        <div id="membros" class="quem-somos-integrante">
-            <img src="https://media.licdn.com/dms/image/C4E03AQGJ_xzTMp6PEw/profile-displayphoto-shrink_400_400/0/1618598831552?e=1718841600&v=beta&t=LeQc3ySx-I1xyqcPr_pLqwDBS-ZsMpiVfDWj3oNTfCM" alt="Foto do Membro 1">
-            <h3>Lucas Guion</h3>
-            <p>Entrou como membro de projeto no primeiro semestre de 2023. E ainda está em seu cargo hoje em dia.</p>
-            <p>Áreas: Adaptação de projeto e melhoria de regras.</p>
-            <p>Linkedin: https://www.linkedin.com/in/lucas-guion-richena-0536081b9/</p>
-        </div>
-        <div id="membro2" class="quem-somos-integrante">
-            <img src="https://media.licdn.com/dms/image/D4E03AQEDLb7ReEPpFQ/profile-displayphoto-shrink_800_800/0/1712578699992?e=1718841600&v=beta&t=QJ_Pi5sDGbrUcH3VzROxuZ4vgvOUk-C5yzylyKrzVLQ" alt="Foto do Membro 2">
-            <h3>Nathan Guilherme</h3>
-            <p>Entrou como membro de projeto no primeiro semestre de 2023. E ainda está em seu cargo hoje em dia.</p>
-            <p>Áreas: Setorização organizacional, desenvolvimento de workflow e desenvolvimento de site.</p>
-            <p>Linkedin: https://www.linkedin.com/in/nathan-guilherme/</p>
-        </div>
-    </div>
-</div>
+    <footer>
+        <f>© 2024 Competição Micro Mouse. Todos os direitos reservados.</f>
+    </footer>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const menuLinks = document.querySelectorAll('.quem-somos-menu a');
-        const integrantes = document.querySelectorAll('.quem-somos-integrante');
-
-        menuLinks.forEach((link) => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href').substring(1);
-                integrantes.forEach((integrante) => {
-                    if (integrante.id === targetId) {
-                        integrante.classList.add('active');
-                    } else {
-                        integrante.classList.remove('active');
-                    }
-                });
-            });
-        });
-
-        // Adicionando funcionalidade ao link "Membros do Projeto"
-        const membrosLink = document.querySelector('.quem-somos-menu a[href="#membros"]');
-        membrosLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            integrantes.forEach((integrante) => {
-                if (integrante.id === 'membros' || integrante.id === 'membro1' || integrante.id === 'membro2') {
-                    integrante.classList.add('active');
-                } else {
-                    integrante.classList.remove('active');
-                }
-            });
-        });
-    });
-</script>
-
+    <script src="scripts.js"></script>
 </body>
-
 </html>

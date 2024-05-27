@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário - Competição Micro Mouse</title>
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger" onclick="toggleMobileMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="logo-container">
+            <img src="https://brand-experience.ieee.org/wp-content/uploads/2019/07/logo-masterbrand-white-transparent.png" alt="IEEE Logo" class="logo">
+            <img src="logo.png" alt="Logo" class="logo" onclick="window.location.href='index.html'">
+        </div>
+        <nav class="desktop-menu">
+            <a href="https://forms.google.com/" class="nav-link">Inscrever-se</a>
+        </nav>
+    </header>
+
+    <nav class="mobile-menu">
+        <a href="index.html" class="nav-link">Página Inicial</a>
+        <a href="calendario.html" class="nav-link">Calendário</a>
+        <a href="labirinto.html" class="nav-link">Geração de Labirinto</a>
+        <a href="https://forms.google.com/" class="nav-link">Inscrever-se</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Calendário</h2>
+            <div id="calendar"></div>
+        </section>
+    </main>
+
+    <footer>
+        <f>© 2024 Competição Micro Mouse. Todos os direitos reservados.</f>
+    </footer>
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
