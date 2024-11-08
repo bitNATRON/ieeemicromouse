@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f8f9fa;
@@ -229,18 +230,18 @@ footer .footer-contact p {
 .quem-somos-integrante {
     margin-bottom: 2em;
     padding: 0 1em;
-    overflow: visible; /* Evita cortar conteúdo */
+    overflow: hidden; /* ocultar conteúdo excedente */
     max-height: 0;
     transition: max-height 0.3s ease;
 }
 
 .quem-somos-integrante.active {
-    max-height: none; /* altura máxima quando a classe 'active' é aplicada */
+    max-height: 500px; /* altura máxima quando a classe 'active' é aplicada */
 }
 
 /* Adicionando uma classe para a animação de "drawer" */
 .quem-somos-integrante.drawer {
-    max-height: none; /* mesma altura máxima para manter a gaveta aberta */
+    max-height: 500px; /* mesma altura máxima para manter a gaveta aberta */
 }
 
 .quem-somos-integrante img {
@@ -252,7 +253,7 @@ footer .footer-contact p {
 
 .quem-somos-header h2 {
     color: #ffffff;
-    border-bottom: transparent;
+    border-bottom: transparent
 }
 
 f {
