@@ -181,7 +181,7 @@ footer .footer-contact p {
     margin-top: 2em;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    overflow: visible;
 }
 
 .quem-somos-header {
@@ -230,7 +230,7 @@ footer .footer-contact p {
 .quem-somos-integrante {
     margin-bottom: 2em;
     padding: 0 1em;
-    overflow: visible;
+    overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s ease;
 }
