@@ -235,12 +235,12 @@ footer .footer-contact p {
 }
 
 .quem-somos-integrante.active {
-    max-height: 500px; /* altura máxima quando a classe 'active' é aplicada */
+    max-height: none; /* altura máxima quando a classe 'active' é aplicada */
 }
 
 /* Adicionando uma classe para a animação de "drawer" */
 .quem-somos-integrante.drawer {
-    max-height: 500px; /* mesma altura máxima para manter a gaveta aberta */
+    max-height: none; /* mesma altura máxima para manter a gaveta aberta */
 }
 
 .quem-somos-integrante img {
