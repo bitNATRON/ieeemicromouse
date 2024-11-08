@@ -240,7 +240,7 @@ footer .footer-contact p {
 
 /* Adicionando uma classe para a animação de "drawer" */
 .quem-somos-integrante.drawer {
-    max-height: 500px /* mesma altura máxima para manter a gaveta aberta */
+    max-height: 500px; /* mesma altura máxima para manter a gaveta aberta */
 }
 
 .quem-somos-integrante img {
