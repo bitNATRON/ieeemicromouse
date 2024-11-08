@@ -229,7 +229,7 @@ footer .footer-contact p {
 .quem-somos-integrante {
     margin-bottom: 2em;
     padding: 0 1em;
-    overflow: hidden; /* ocultar conteúdo excedente */
+    overflow: visible; /* Evita cortar conteúdo */
     max-height: 0;
     transition: max-height 0.3s ease;
 }
